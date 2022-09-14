@@ -1,0 +1,25 @@
+
+import java.util.Scanner;
+public class Main {
+    public static String solution(String value){
+        String answer = "";
+
+        for ( char ch : value.toCharArray()){
+            if (Character.isUpperCase(ch)){
+                answer += Character.toLowerCase(ch);
+            }
+            else {
+                answer += Character.toUpperCase(ch);
+            }
+        }
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String value = scanner.next();
+
+        System.out.println(solution(value));
+    }
+}
