@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); //scanner 에서 값을 입력받는다
+
+        int num = scanner.nextInt();  //입력 할 단어의 갯수는 num이다
+        String[] array = new String[num]; 
+				//String 타입의 값이 있는 배열 array에 num만큼 값이 들어갈 수 있다
+        for(int a = 0; a < num; a++ ) { 
+            array[a] =  scanner.next();
+		        } 
+				// 입력한 단어는 정한갯수(num)의 범위(a)만큼 array에 들어간다 
+
+
+        Main main = new Main();
+
+        main.solution(array);  //solution의 매개변수로 array를 넘겨주겠다
+
+
+    }
+    public void solution(String[] array){
+        for (String x : array ) { 
+           String str = new StringBuilder(x).reverse().toString();
+            System.out.println(str);
+
+			//solution이라는 메서드는 매개변수로 array배열을 받는다.
+			// array에 담긴 문자들(x) 하나하나를 각각 뒤집은 후 string으로 변환한 뒤 str에 저장해라
+			// str을 출력해라.
+        }
+    }
+}
